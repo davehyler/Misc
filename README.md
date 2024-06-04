@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>ReadMe.MD for ${title}</title>
-</head>
-<body>
-
-<div class="container">
 <h1 id="title">ReadMe file for "${title}"</h1>
 <h3>By User ${username}</h3>
 <nav>
@@ -47,6 +37,3 @@
 <li class="list-group-item">GitHub username: ${username}</li>
 <li class="list-group-item">Email:  ${email}</li>
 </ul>
-</div>
-</body>
-</html>
