@@ -1,5 +1,6 @@
 <h1 id="title">ReadMe file for "${title}"</h1>
 <h3>By User ${username}</h3>
+<img src = "screenshot.png" alt = "Optional Screenshot of Project (will only show if this user has correctly uploaded a screenshot), locate at "screenshot.png" in the same folder as your README.md file>
 <nav>
 <h2>Table Of Contents</h2>
 <ol>
