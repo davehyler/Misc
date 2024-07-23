@@ -11,7 +11,206 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins"
     />
-    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
+  
+  /*adding body css*/
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+  }
+  
+  /*navigation area css styled*/
+  .navigation-bar a {
+    position: relative;
+    font-size: 1.4em;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+  }
+  
+  .navigation-bar .login-btn {
+    width: 130px;
+    height: 50;
+    background: transparent;
+    border: 2px solid aliceblue;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.4em;
+    color: aliceblue;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 1s;
+  }
+  
+  /*hovering effect with light up color*/
+  .navigation-bar a:hover {
+    background-color: blueviolet;
+  }
+  
+  .navigation-bar .login-btn:hover {
+    background-color: blueviolet;
+  }
+  
+  .pop-up-login {
+    position: relative;
+    width: 442px;
+    height: 740px;
+    background: whitesmoke;
+    border: 2px solid #ffffff80;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+  }
+  
+  .pop-up-login .login-area {
+    width: 100%;
+    /* padding: 40px; */
+  }
+  
+  .pop-up-login .login-area.login {
+    transition: transform 0.1s;
+    transform: translateX();
+  }
+  
+  .pop-up-login.active .login {
+    transition: none;
+    transform: translateX(-400px);
+  }
+  
+  .pop-up-login .create-account {
+    position: absolute;
+    transform: translateX(400px);
+  }
+  
+  .pop-up-login .close-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-area h2 {
+    font-size: 2em;
+    color: black;
+    text-align: center;
+  }
+  
+  .input-area {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 30px 0;
+  }
+  
+  .input-area label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.3s;
+  }
+
+
+  .modal-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.modal-wrapper {
+    width: 300px;
+    height: 500px;
+    background: ghostwhite;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-btn-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-btn {
+    padding: 8px;
+    background: slateblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: ghostwhite;
+    font-weight: 5px;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.close-btn-wrapper {
+    display: flex;
+}
+.close-btn {     
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: 20px auto;
+    max-width: 210px;
+    width: 100%;
+} 
+.hide {
+    display: none;
+}
+h1 {
+    text-align: center;
+}   
+
+a.menu_links { cursor: pointer; }
+</style>
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
